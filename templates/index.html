@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Summary App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 30px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+        input[type="file"],
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #3367d6;
+        }
+        pre, p {
+            background: #fff;
+            padding: 15px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Video Summary App</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <label for="video">Upload a video file (.mp4, .mov, .avi, etc):</label>
+        <input type="file" id="video" name="video" accept="video/*">
+
+        <label for="url">Or enter a YouTube video URL:</label>
+        <input type="text" id="url" name="url" placeholder="https://www.youtube.com/watch?v=...">
+
+        <button type="submit">Generate Summary</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if transcript %}
+        <h2>Transcript</h2>
+        <pre>{{ transcript }}</pre>
+    {% endif %}
+
+    {% if summary %}
+        <h2>Summary</h2>
+        <p>{{ summary }}</p>
+    {% endif %}
+</body>
+</html>
