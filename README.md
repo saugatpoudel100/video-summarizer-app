@@ -36,19 +36,19 @@ cd video-summary-app
 ```
 2. Create a Virtual Environment (Optional)
 ```bash
-Copy code
+
 python -m venv venv
 source venv/bin/activate       # macOS/Linux
 venv\Scripts\activate          # Windows
 ```
 ## 3. Install Requirements
 ```bash
-Copy code
+
 pip install -r requirements.txt
 ```
 🏁 Run the App
 ```bash
-Copy code
+
 python app.py
 ```
 Open your browser and go to:
@@ -56,7 +56,7 @@ Open your browser and go to:
 
 ## 📁 File Structure
 ```bash
-Copy code
+
 video-summary-app/
 │
 ├── app.py                      # Main Flask application
@@ -73,6 +73,7 @@ video-summary-app/
 │   └── demo_screenshot.png     # Optional: UI screenshot or CSS
 ```
 ## 📦 Dependencies
+```bash
 nginx
 Copy code
 flask
@@ -85,11 +86,12 @@ werkzeug
 numpy
 soundfile
 huggingface-hub
+```
 
 ### Install with:
 
 ```bash
-Copy code
+
 pip install -r requirements.txt
 ```
 ## 📌 Notes
