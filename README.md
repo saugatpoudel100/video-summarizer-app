@@ -33,25 +33,29 @@ A Flask web application that allows you to:
 ```bash
 git clone https://github.com/yourusername/video-summary-app.git
 cd video-summary-app
+```
 2. Create a Virtual Environment (Optional)
-bash
+```bash
 Copy code
 python -m venv venv
 source venv/bin/activate       # macOS/Linux
 venv\Scripts\activate          # Windows
-3. Install Requirements
-bash
+```
+## 3. Install Requirements
+```bash
 Copy code
 pip install -r requirements.txt
+```
 🏁 Run the App
-bash
+```bash
 Copy code
 python app.py
+```
 Open your browser and go to:
 📍 http://127.0.0.1:5000/
 
-📁 File Structure
-bash
+## 📁 File Structure
+```bash
 Copy code
 video-summary-app/
 │
@@ -67,7 +71,8 @@ video-summary-app/
 │
 ├── static/
 │   └── demo_screenshot.png     # Optional: UI screenshot or CSS
-📦 Dependencies
+```
+## 📦 Dependencies
 nginx
 Copy code
 flask
@@ -80,22 +85,24 @@ werkzeug
 numpy
 soundfile
 huggingface-hub
-Install with:
 
-bash
+### Install with:
+
+```bash
 Copy code
 pip install -r requirements.txt
-📌 Notes
+```
+## 📌 Notes
 YouTube summaries are based on descriptions, not audio transcription.
 
 For best results, upload videos with clear speech.
 
 GPU is used automatically if available.
 
-🤝 License
+## 🤝 License
 MIT License — free to use, modify, and distribute.
 
-💬 Acknowledgements
+## 💬 Acknowledgements
 Hugging Face 🤗 Transformers
 
 Facebook AI Research
